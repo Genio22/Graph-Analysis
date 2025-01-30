@@ -93,7 +93,7 @@ int main()
         printf("n = %d:\n", n);
         printf("  Number of edges = %d\n", edge_count);
         printf("  Sum of degrees = %d\n", sum_degree);
-        printf("  Handshaking lemma holds: %s\n", (sum_degree == 2 * edge_count) ? "Yes" : "No");
+        printf("  Handshaking theorem : %s\n", (sum_degree == 2 * edge_count) ? "Yes" : "No");
         printf("  Time taken = %.2f ms\n\n", time_taken);
 
         // print matrix
@@ -112,21 +112,7 @@ int main()
         //     printf("%d ", degree[j]);
         // }
 
-        // Genarate matrix value and assign it
-        // for (int i = 0; i < n; i++)
-        // {
-        //     for (int j = 0; j < n; j++)
-        //     {
-        //         if (i == j)
-        //         {
-        //             matrix[i][j] = 0; // self lopping bade
-        //         }
-        //         else
-        //         {
-        //             matrix[i][j] = matrix[j][i] = rand() % 2; // 0 holo edge nai , 1 hoile ache
-        //         }
-        //     }
-        // }
+      
         printf("Do you want to exit.(Yes -> 1| No -> 0) ");
         scanf("%d", &i);
         getchar();
