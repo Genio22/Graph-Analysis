@@ -3,6 +3,36 @@
 #include <stdlib.h>
 #include <time.h>
 
+void print_logo() {
+    printf(" _____                       __                      _             \n");
+    printf("/__   \\___  __ _ _ __ ___   / _\\ ___ ___  _ __ _ __ (_) ___  _ __  \n");
+    printf("  / /\\/ _ \\/ _` | '_ ` _ \\  \\ \\ / __/ _ \\| '__| '_ \\| |/ _ \\| '_ \\ \n");
+    printf(" / / |  __/ (_| | | | | | | _\\ \\ (_| (_) | |  | |_) | | (_) | | | |\n");
+    printf(" \\/   \\___|\\__,_|_| |_| |_| \\__/\\___\\___/|_|  | .__/|_|\\___/|_| |_|\n");
+    printf("                                              |_|                 \n");
+}
+
+void print_details() {
+    printf("\nPresented by:\n");
+    printf("Group 4\n");
+    printf("Tuhin - (2024-3-60-441)\n");
+    printf("Sakib - (2024-3-60-442)\n");
+    printf("Al Amin - (2024-3-60-448)\n");
+    printf("Ahnaf - (2024-3-60-449)\n");
+
+    printf("\nPresented to:\n");
+    printf("Dr. Mohammad Salah Uddin\n");
+    printf("Associate Professor\n");
+    printf("Department of Computer Science & Engineering\n");
+    printf("East West University\n\n");
+    printf("***********************************\n");
+    printf("*                                 *\n");
+    printf("*  Undirected Graph Analysis      *\n");
+    printf("*                                 *\n");
+    printf("***********************************\n\n");
+}
+
+
 int main()
 {
     // int n_ar[] = {
@@ -12,7 +42,8 @@ int main()
     //     4000,
     //     5000,
     // };
-
+    print_logo();
+    print_details();
     srand(time(0)); // random every time
 
     // int size = sizeof(n_ar) / sizeof(n_ar[0]);
@@ -98,6 +129,7 @@ int main()
         // }
         printf("Do you want to exit.(Yes -> 1| No -> 0) ");
         scanf("%d", &i);
+        getchar();
         if (i)
             break;
     }
