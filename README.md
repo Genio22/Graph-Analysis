@@ -6,7 +6,7 @@ This project is a **Mini Project 2** for even-numbered groups, implemented in C.
 ## Features
 - Generates an **undirected graph** using an **adjacency matrix representation**.
 - Computes the **number of edges** and **degree of each vertex**.
-- Verifies the **Handshaking Lemma** (sum of degrees = 2 × number of edges).
+- Verifies the **Handshaking theorem** (sum of degrees = 2 × number of edges).
 - Measures **computational time** in milliseconds.
 - Runs experiments for **n = 1000, 2000, 3000, 4000, and 5000**.
 - Provides data for **time complexity analysis** using Excel.
