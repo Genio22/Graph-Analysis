@@ -5,23 +5,26 @@
 
 int main()
 {
-    int n_ar[] = {
-        1000,
-        2000,
-        3000,
-        4000,
-        5000,
-    };
+    // int n_ar[] = {
+    //     1000,
+    //     2000,
+    //     3000,
+    //     4000,
+    //     5000,
+    // };
 
     srand(time(0)); // random every time
 
-    int size = sizeof(n_ar) / sizeof(n_ar[0]);
+    // int size = sizeof(n_ar) / sizeof(n_ar[0]);
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i != -1; i++)
     {
 
-        int n = n_ar[i]; // Current value of n (e.g., 1000, 2000, etc.)
+        // int n = n_ar[i]; // Current value of n (e.g., 1000, 2000, etc.)
         // int matrix[n][n];
+        int n;
+        printf("Enter the vertex number: ");
+        scanf("%d", &n);
         long edge_count = 0, edge, sum_degree = 0;
         int degree[n];
         for (int i = 0; i < n; i++)
@@ -93,6 +96,10 @@ int main()
         //         }
         //     }
         // }
+        printf("Do you want to exit.(Yes -> 1| No -> 0) ");
+        scanf("%d", &i);
+        if (i)
+            break;
     }
 
     return 0;
