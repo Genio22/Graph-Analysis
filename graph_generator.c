@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -13,46 +12,34 @@ void print_logo() {
 }
 
 void print_details() {
-    printf("\nPresented by:\n");
-    printf("Group 4\n");
-    printf("Tuhin - (2024-3-60-441)\n");
-    printf("Sakib - (2024-3-60-442)\n");
-    printf("Al Amin - (2024-3-60-448)\n");
-    printf("Ahnaf - (2024-3-60-449)\n");
+    printf("\nPresented by:                       |    Presented to:\n");
+    printf("Group 4                             |                      \n");
+    printf("Tuhin - (2024-3-60-441)             |    Dr. Mohammad Salah Uddin\n");
+    printf("Sakib - (2024-3-60-442)             |    Associate Professor\n");
+    printf("Al Amin - (2024-3-60-448)           |    Department of Computer Science & Engineering\n");
+    printf("Ahnaf - (2024-3-60-449)             |    East West University\n\n");
 
-    printf("\nPresented to:\n");
-    printf("Dr. Mohammad Salah Uddin\n");
-    printf("Associate Professor\n");
-    printf("Department of Computer Science & Engineering\n");
-    printf("East West University\n\n");
-    printf("***********************************\n");
-    printf("*                                 *\n");
-    printf("*  Undirected Graph Analysis      *\n");
-    printf("*                                 *\n");
-    printf("***********************************\n\n");
+
+    printf("                   ***********************************\n");
+    printf("                   *                                 *\n");
+    printf("                   *  Undirected Graph Analysis      *\n");
+    printf("                   *                                 *\n");
+    printf("                   ***********************************\n\n");
 }
 
 
 int main()
 {
-    // int n_ar[] = {
-    //     1000,
-    //     2000,
-    //     3000,
-    //     4000,
-    //     5000,
-    // };
+
     print_logo();
     print_details();
     srand(time(0)); // random every time
 
-    // int size = sizeof(n_ar) / sizeof(n_ar[0]);
+
 
     for (int i = 0; i != -1; i++)
     {
 
-        // int n = n_ar[i]; // Current value of n (e.g., 1000, 2000, etc.)
-        // int matrix[n][n];
         int n;
         printf("Enter the vertex number: ");
         scanf("%d", &n);
@@ -96,14 +83,32 @@ int main()
         printf("  Handshaking theorem : %s\n", (sum_degree == 2 * edge_count) ? "Yes" : "No");
         printf("  Time taken = %.2f ms\n\n", time_taken);
 
-        // print matrix
-        // for (int i = 0; i < n; i++)
+
+
+        // Genarate matrix value and assign it
+        //int matrix[n][n];
+        //for (int i = 0; i < n; i++)
         // {
         //     for (int j = 0; j < n; j++)
         //     {
-        //         printf("%d ", matrix[i][j]);
+        //         if (i == j)
+        //         {
+        //             matrix[i][j] = 0; // self lopping bade
+        //         }
+        //        else
+        //         {
+        //             matrix[i][j] = matrix[j][i] = rand() % 2; // 0 holo edge nai , 1 hoile ache
+        //       }
         //     }
-        //     printf("\n");
+        // }
+
+        // for (int i = 0; i < n; i++)
+        //{
+        //   for (int j = 0; j < n; j++)
+        //   {
+        //        printf("%d ", matrix[i][j]);
+        //    }
+        //    printf("\n");
         // }
 
         // print degree
@@ -112,7 +117,7 @@ int main()
         //     printf("%d ", degree[j]);
         // }
 
-      
+
         printf("Do you want to exit.(Yes -> 1| No -> 0) ");
         scanf("%d", &i);
         getchar();
