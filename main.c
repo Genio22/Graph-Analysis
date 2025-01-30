@@ -21,8 +21,8 @@ int main()
     {
 
         int n = n_ar[i]; // Current value of n (e.g., 1000, 2000, etc.)
-        //int matrix[n][n];
-        int edge_count = 0, edge;
+        // int matrix[n][n];
+        long edge_count = 0, edge, sum_degree = 0;
         int degree[n];
         for (int i = 0; i < n; i++)
         {
@@ -36,7 +36,7 @@ int main()
         {
             for (int j = i + 1; j < n; j++) // upper triangle only count kortechi for edge
             {
-                edge = rand()%2;
+                edge = rand() % 2;
                 if (edge)
                 {
                     edge_count++;
@@ -46,7 +46,6 @@ int main()
             }
         }
 
-        int sum_degree = 0;
         for (int i = 0; i < n; i++)
         {
             sum_degree += degree[i];
@@ -98,8 +97,5 @@ int main()
 
     return 0;
 }
-
-
-
 
 // By Team Scorpion
