@@ -45,7 +45,7 @@ int main()
         int n;
         printf("Enter the vertex number: ");
         scanf("%d", &n);
-        long edge_count = 0, edge, sum_degree = 0;
+        long edge_count = 0, matrix, sum_degree = 0;
         int degree[n];
         for (int i = 0; i < n; i++)
         {
@@ -88,8 +88,8 @@ int main()
         {
             for (int j = i + 1; j < n; j++) // upper triangle only count kortechi for edge
             {
-                edge = rand() % 2;
-                if (edge)
+                matrix = rand() % 2;
+                if (matrix)
                 {
                     edge_count++;
                     degree[i]++; // ami i direct accsess korte parte che so para nai
@@ -115,32 +115,6 @@ int main()
         printf("  Time taken = %.2f ms\n\n", time_taken);
 
 
-
-        // Genarate matrix value and assign it
-        //int matrix[n][n];
-        //for (int i = 0; i < n; i++)
-        // {
-        //     for (int j = 0; j < n; j++)
-        //     {
-        //         if (i == j)
-        //         {
-        //             matrix[i][j] = 0; // self lopping bade
-        //         }
-        //        else
-        //         {
-        //             matrix[i][j] = matrix[j][i] = rand() % 2; // 0 holo edge nai , 1 hoile ache
-        //       }
-        //     }
-        // }
-
-        // for (int i = 0; i < n; i++)
-        //{
-        //   for (int j = 0; j < n; j++)
-        //   {
-        //        printf("%d ", matrix[i][j]);
-        //    }
-        //    printf("\n");
-        // }
 
         // print degree
         // for (int j = 0; j < n; j++)
