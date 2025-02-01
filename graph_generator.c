@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-void print_logo() {
+void print_logo()
+{
     printf(" _____                       __                      _             \n");
     printf("/__   \\___  __ _ _ __ ___   / _\\ ___ ___  _ __ _ __ (_) ___  _ __  \n");
     printf("  / /\\/ _ \\/ _` | '_ ` _ \\  \\ \\ / __/ _ \\| '__| '_ \\| |/ _ \\| '_ \\ \n");
@@ -11,7 +12,8 @@ void print_logo() {
     printf("                                              |_|                 \n");
 }
 
-void print_details() {
+void print_details()
+{
     printf("\nPresented by:                       |    Presented to:\n");
     printf("Group 4                             |                      \n");
     printf("Tuhin - (2024-3-60-441)             |    Dr. Mohammad Salah Uddin\n");
@@ -49,7 +51,36 @@ int main()
         {
             degree[i] = 0;
         }
-
+        if(n<100 && n>0)         // Genarate matrix value and assign it
+        {
+            int matrix[n][n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (i == j)
+                    {
+                        matrix[i][j] = 0; // self lopping bade
+                    }
+                    else
+                    {
+                        matrix[i][j] = matrix[j][i] = rand() % 2; // 0 holo edge nai , 1 hoile ache
+                    }
+                }
+            }
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    printf("%d ", matrix[i][j]);
+                }
+                printf("\n");
+            }
+        }
+        else
+        {
+            printf("\nMatrix is too large to print\n\n");
+        }
         // Start measuring time
         clock_t start_time = clock();
 
